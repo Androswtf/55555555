@@ -1,0 +1,43 @@
+.b_hamburger {
+  width : 24px;
+  height : 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.b_hamburger div {
+  position: absolute;
+  width : 100%;
+  height : 2px;
+  background: #000;
+  left: 0;
+  opacity: 1;
+  transform-origin: center center;
+  transition: top .15s, transform .4s, opacity .2s;
+}
+
+.b_hamburger div:nth-child(1) {
+  top: 0;
+}
+
+.b_hamburger div:nth-child(2) {
+  top: 50%;
+}
+
+.b_hamburger div:nth-child(3) {
+  top: 100%;
+}
+
+.b_hamburger.this--cross div:nth-child(2) {
+  opacity: 0;
+}
+
+.b_hamburger.this--cross div:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.b_hamburger.this--cross div:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,26 @@
+.b_pagination {
+  display: flex;
+  list-style: none;
+}
+
+.b_pagination__item {
+  margin-right : 10px;
+
+  &:last-child {
+    margin-right : 0;
+  }
+}
+
+.b_pagination__link {
+  font-size : 16px;
+  color: $pagination_link_color;
+  text-decoration : none;
+
+  &.this--current {
+    color: $pagination_active_link_color;
+  }
+
+  &:hover {
+    color: $pagination_active_link_color;
+  }
+}

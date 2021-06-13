@@ -1,0 +1,40 @@
+.b_our_state {
+  @media (max-width: $big_tablet) {
+    margin-top : 20px;
+  }
+}
+
+.b_our_state__preface {
+  margin-bottom : 60px;
+}
+
+.b_our_state__presentation {
+  margin-bottom : 40px;
+}
+
+.b_our_state__workers {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top : -60px;
+  margin-left : -30px;
+}
+
+.b_our_state__worker {
+  flex-basis: calc(50% - 30px);
+  margin-left : 30px;
+  margin-top : 60px;
+
+  @media (max-width: $small_tablet) {
+    flex-basis: 100%;
+  }
+}
+
+.b_our_state__worker .b_frame__img {
+  min-height: auto !important;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top : 70%;
+  }
+}

@@ -1,0 +1,55 @@
+.b_project_descriptions {
+  display: flex;
+
+  @media (max-width: $big_tablet) {
+    flex-direction: column-reverse;
+  }
+}
+
+.b_project_descriptions__info {
+  flex-basis: 30%;
+}
+
+.b_project_descriptions__img {
+  flex-basis: 70%;
+}
+
+.b_project_descriptions__title {
+  margin: 0;
+  margin-bottom : 40px;
+  color: $header_color;
+  font-weight : bold;
+  font-size : 24px;
+}
+
+.b_project_descriptions__stat {
+  margin-bottom : 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.b_project_descriptions__name {
+  color: $neutral_color;
+  font-size : 16px;
+  margin-bottom : 8px;
+}
+
+.b_project_descriptions__value {
+  color: $second_neutral_color;
+  font-size : 16px;
+  font-weight : bold;
+}
+
+.b_project_descriptions__img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top : 10px;
+
+  @media (max-width: $big_tablet) {
+    min-height : 400px;
+    margin-top : 0;
+    margin-bottom : 30px;
+  }
+}

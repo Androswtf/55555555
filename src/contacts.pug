@@ -1,0 +1,36 @@
+- let navigationLinks = [['/projects.html', 'Проекты', 'projects', false],['/about.html', 'О компании', 'about'],['/service.html', 'Услуги', 'services'],['/contacts.html', 'Контакты', 'contacts', true]];
+include ./pug/header.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Главная | Проектая компания №1
+        include ./pug/head
+    body
+        +header(navigationLinks, true)
+        section.section
+            .container
+                h1(data-locale="contacts").h1.this--left Контакты
+                .b_contacts
+                    .b_contacts__info
+                        h4.b_contacts__line
+                            a(href="mailto:pk1@gmail.com") prkpone@gmail.com
+                        h4.b_contacts__line
+                            a(href="tel:+79445748356") +7 988 577 30 62
+                        h4(data-locale="address").b_contacts__line  г. Ростов-на-Дону, пр. Соколова 72
+                        h4(data-locale="time").b_contacts__line  пн - пт с 9:00 до 18:00
+                        ul.b_socials.b_contacts__social
+                            li.b_socials__item
+                                a(href="#").b_socials__link
+                                    svg(width=13 height=13).b_socials__icon
+                                        use(href="/assets/icons.svg#inst")
+                            li.b_socials__item
+                                a(href="#").b_socials__link
+                                    svg(width=14 height=10).b_socials__icon
+                                        use(href="/assets/icons.svg#youtube")
+                    .b_contacts__map#contacts-map
+        include ./pug/footer.pug
+        script(src="/scripts/index.js")

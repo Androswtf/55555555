@@ -1,0 +1,18 @@
+.b_subscribed_img {
+  display: flex;
+  flex-direction: column;
+}
+
+.b_subscribed_img__img {
+  min-height: 417px;
+  flex-basis: 100%;
+  margin-bottom : 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.b_subscribed_img__text {
+  font-size : 16px;
+  color: $neutral_color;
+  line-height : 2;
+}

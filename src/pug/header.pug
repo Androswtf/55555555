@@ -1,0 +1,36 @@
+mixin header(navArr, underlined)
+    - let headerClassStr = underlined === true ? 'b_header this--underline': 'b_header';
+    header(class=headerClassStr)
+        .container.b_header__body
+            a(href="/").b_header__logo
+                svg(width=119 height=20).b_header__icon
+                    use(href="/assets/icons.svg#logo")
+            .b_header__right
+                .b_hamburger.b_header__hamburger
+                    div
+                    div
+                    div
+                nav.b_header__nav
+                    ul.b_header__links-list
+                        each navLink in navArr
+                            li.b_header__links-item
+                                if navLink[3]
+                                    a(href=navLink[0] class="b_header__links-link this--active" data-locale=navLink[2])=navLink[1]
+                                else
+                                    a(href=navLink[0] class='b_header__links-link' data-locale=navLink[2])=navLink[1]
+                .b_header__locale
+                    .b_header__current-locale
+                nav.b_header__mobile
+                    .b_hamburger.b_header__hamburger
+                        div
+                        div
+                        div
+                    ul.b_header__links-list
+                        each navLink in navArr
+                            li.b_header__links-item
+                                if navLink[3]
+                                    a(href=navLink[0] class="b_header__links-link this--active" data-locale=navLink[2])=navLink[1]
+                                else
+                                    a(href=navLink[0] class='b_header__links-link' data-locale=navLink[2])=navLink[1]
+                    .b_header__locale
+                        .b_header__current-locale

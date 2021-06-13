@@ -1,0 +1,80 @@
+- let navigationLinks = [['/projects.html', 'Проекты', 'projects', true],['/about.html', 'О компании', 'about'],['/service.html', 'Услуги', 'services'],['/contacts.html', 'Контакты', 'contacts']];
+include ./pug/header.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Проекты | Проектая компания №1
+        include ./pug/head
+    body
+        +header(navigationLinks, true)
+        section.section
+            .container
+                h1(data-locale="projects").h1.this--left.this--mb30  Проекты
+                ul.b_tabs
+                    li.b_tabs__item
+                        a(href="/concrete-project.html").b_tabs__link.this--active Все
+                    li.b_tabs__item
+                        a(href="/concrete-project.html").b_tabs__link Проектирование
+                    li.b_tabs__item
+                        a(href="/concrete-project.html").b_tabs__link Реконструкция
+                    li.b_tabs__item
+                        a(href="/concrete-project.html").b_tabs__link Промышленный сток
+        section.section.this--pt0
+            .container
+                .b_gallery
+                    article.b_frame.b_gallery__main.animation-opacity
+                        a(style="background-image: url('/assets/img/projects/reconstruction.jpg')" href="/concrete-project.html").b_frame__img.this--h370
+                        .b_frame__text
+                            h5.b_frame__title Промышленный сток
+                            h6.b_frame__subtitle ООО «Конструктив»
+                    div.b_gallery__side
+                        .b_gallery__row
+                            article.b_frame.b_gallery__frame.animation-opacity
+                                a(style="background-image: url('/assets/img/projects/drainage.jpg')" href="/concrete-project.html").b_frame__img
+                                .b_frame__text
+                                    h5.b_frame__title Проектирование
+                                    h6.b_frame__subtitle АО «ЭнПромКонстракшн», г. Москва
+                            article.b_frame.b_gallery__frame.animation-opacity
+                                a(style="background-image: url('/assets/img/projects/comitet.jpg')" href="/concrete-project.html").b_frame__img
+                                .b_frame__text
+                                    h5.b_frame__title Реконструкция
+                                    h6.b_frame__subtitle
+                                            | Администрация Гурьевского городского округа
+                                            | Глава администрации Гурьевского городского округа Калининградской области
+        section.section.this--pt0
+            .container
+                .b_gallery
+                    article.b_frame.b_gallery__main.animation-opacity
+                        a(style="background-image: url('/assets/img/projects/big-drainage.jpg')" href="/concrete-project.html").b_frame__img.this--h500
+                        .b_frame__text
+                            h5.b_frame__title Промышленный сток
+                            h6.b_frame__subtitle Федеральное государственное унитарное предприятие "Росморпорт" г.Москва
+                    div.b_gallery__side.this--h500
+                        .b_gallery__row
+                            article.b_frame.b_gallery__frame.this--solo.animation-opacity
+                                a(style="background-image: url('/assets/img/projects/glass-city.jpg')" href="/concrete-project.html").b_frame__img
+                                .b_frame__text
+                                    h5.b_frame__title Проектирование
+                                    h6.b_frame__subtitle ООО "Проектстройсервис" Ямало-Ненецкий автономный округ г.Лабытнанги
+                        .b_gallery__row
+                            article.b_frame.b_gallery__frame.animation-opacity
+                                a(style="background-image: url('/assets/img/projects/abstract-building.jpg')" href="/concrete-project.html").b_frame__img
+                                .b_frame__text
+                                    h5.b_frame__title Проектирование
+                                    h6.b_frame__subtitle Государственное унитарное предприятие "Водоканал Ленинградской области"
+                            article.b_frame.b_gallery__frame.animation-opacity
+                                a(style="background-image: url('/assets/img/projects/comitet.jpg')" href="/concrete-project.html").b_frame__img
+                                .b_frame__text
+                                    h5.b_frame__title Проектирование
+                                    h6.b_frame__subtitle АО "Компания Усть-Луга" г.Москва
+                ul.b_pagination.mt100
+                    li.b_pagination__item
+                        a(href="/projects.html").b_pagination__link 1
+                    li.b_pagination__item
+                        a(href="/projects-2.html").b_pagination__link.this--current 2
+        include ./pug/footer.pug
+        script(src="/scripts/index.js")

@@ -1,0 +1,80 @@
+- let navigationLinks = [['/projects.html', 'Проекты', 'projects', false],['/about.html', 'О компании', 'about'],['/service.html', 'Услуги', 'services'],['/contacts.html', 'Контакты', 'contacts']];
+include ./pug/header.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Главная | Проектая компания №1
+        include ./pug/head
+    body
+        +header(navigationLinks, true)
+        section.section.this--pt50
+            .container
+                .b_project_descriptions
+                    .b_project_descriptions__info
+                        h1.b_project_descriptions__title Атлантис-Пак Станция
+                        div.b_project_descriptions__stats
+                            .b_project_descriptions__stat
+                                h5(data-locale="category").b_project_descriptions__name Категория
+                                h4.b_project_descriptions__value Атлантис-Пак Станция
+                            .b_project_descriptions__stat
+                                h5(data-locale="period").b_project_descriptions__name Период строительства
+                                h4.b_project_descriptions__value 2018 - 2020
+                            .b_project_descriptions__stat
+                                h5(data-locale="status").b_project_descriptions__name Статус
+                                h4.b_project_descriptions__value Построен
+                            .b_project_descriptions__stat
+                                h5(data-locale="place").b_project_descriptions__name Место
+                                h4.b_project_descriptions__value Москва
+                            .b_project_descriptions__stat
+                                h5(data-locale="area").b_project_descriptions__name Площадь
+                                h4.b_project_descriptions__value 357 м
+                            .b_project_descriptions__stat
+                                h5(data-locale="client").b_project_descriptions__name Заказчик
+                                h4.b_project_descriptions__value ООО “Аквилон”
+                    div(style="background-image: url('/assets/img/concrete-project.jpg')" alt="concrete-project").b_project_descriptions__img
+        section.section
+            .container
+                h1(data-locale="design_features").h1.this--left Особенности проектирования
+                div.text.maxwidth550
+                    p
+                        | При работе над проектом строительства станции мы
+                        | следовали требованиям Заказчиков, при этом опирались на собственные
+                        | типовые решения и запатентованные технологии, которые обеспечивают энергосбережение,
+                        | снижение капитальных и эксплуатационных затрат, возможность повторного
+                        | использования очищенных сточных вод.
+                img(src="/assets/img/plane.png" alt="plane").rel-vm50
+        section.section
+            .container
+                .parallel.this--two
+                    div
+                        h1(data-locale="design_features").h1.this--left.this--mt0 Особенности проектирования
+                        p
+                            | При работе над проектом строительства станции мы следовали
+                            | требованиям Заказчиков, при этом опирались на собственные типовые решения
+                            | и запатентованные технологии, которые обеспечивают энергосбережение, снижение
+                            | капитальных и эксплуатационных затрат, возможность повторного использования
+                            | очищенных сточных вод.
+                    .b_subscribed_img.ml20.bigtablet-mt30
+                        div(style="background-image: url('/assets/img/concrete-project.jpg')").b_subscribed_img__img
+                        div.b_subscribed_img__text При работе над проектом строительства станции мы следовали требованиям Заказчиков
+        section.section
+            .container
+                .b_img_tiles
+                    .b_img_tiles__row.this--h900
+                        .b_img_tiles__column
+                            div(style="background-image: url('/assets/img/concrete-project/1.jpg')" alt="").b_img_tiles__img.this--fb60
+                            div(style="background-image: url('/assets/img/concrete-project/2.jpg')" alt="").b_img_tiles__img.this--fb40
+                        .b_img_tiles__column
+                            div(style="background-image: url('/assets/img/concrete-project/3.jpg')" alt="").b_img_tiles__img.this--fb30
+                            div(style="background-image: url('/assets/img/concrete-project/4.jpg')" alt="").b_img_tiles__img.this--fb70
+                    div.b_img_tiles__row
+                        .b_img_tiles__img
+                            img(src="/assets/img/concrete-project/5.jpg" alt="")
+                div.right.mt40
+                    a(href="/projects.html" data-locale="all_projects").link Все проекты
+        include ./pug/footer.pug
+        script(src="/scripts/index.js")

@@ -1,0 +1,26 @@
+.b_btn {
+  display: inline-block;
+  font-size : 24px;
+  text-align : center;
+  padding : .8em 1em;
+  color: #000;
+  font-weight : 500;
+  border : 1px solid #000;
+  background: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+
+  &.this--block {
+    display: block;
+    width : 100%;
+  }
+
+  &:hover {
+    background: #000;
+    color: #fff;
+    transition: background-color .2s, color .2s;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+  }
+}

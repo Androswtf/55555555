@@ -1,0 +1,26 @@
+.b_tabs {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-left : -30px;
+  margin-top : -20px;
+}
+
+.b_tabs__item {
+  margin-left : 30px;
+  margin-top : 20px;
+}
+
+.b_tabs__link {
+  text-decoration : none;
+  font-size : 16px;
+  color: $tabs_color;
+
+  &:hover {
+    color: $tabs_active_color;
+  }
+
+  &.this--active {
+    color: $tabs_active_color;
+  }
+}

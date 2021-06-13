@@ -1,0 +1,41 @@
+{
+  "name": "project-company",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scripts": "gulp scripts"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnasnipp/poject-company.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dnasnipp/poject-company/issues"
+  },
+  "homepage": "https://github.com/dnasnipp/poject-company#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/three": "^0.129.1",
+    "babel-loader": "^8.2.2",
+    "gulp": "^4.0.2",
+    "gulp-image": "^6.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "node-sass": "^6.0.0",
+    "prettier": "2.3.0",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^6.1.2"
+  },
+  "dependencies": {
+    "three": "^0.129.0"
+  }
+}

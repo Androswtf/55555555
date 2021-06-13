@@ -1,0 +1,36 @@
+- let navigationLinks = [['/projects.html', 'Проекты', 'projects'],['/about.html', 'О компании', 'about', true],['/service.html', 'Услуги', 'services'],['/contacts.html', 'Контакты', 'contacts']];
+include ./pug/header.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title О компании | Проектая компания №1
+        include ./pug/head
+    body
+        +header(navigationLinks, true)
+        section.section
+            .container
+                h1(data-locale="about").h1.this--left.this--mb30 О компании
+
+                div.text
+                    p
+                        | При работе над проектом строительства станции мы следовали требованиям
+                        | Заказчиков, при этом опирались на собственные типовые решения
+                        | и запатентованные технологии, которые обеспечивают
+                        | энергосбережение, снижение капитальных и эксплуатационных затрат, возможность
+                        | повторного использования очищенных
+                        | сточных вод.
+                    p
+                        | В рамках проекта мы изготовили на собственном производстве
+                        | станцию очистки сточных вод HYY производительностью
+                        | 1000 м³/сут., а также произвели монтаж и пуско-наладку очистных
+                        | сооружений. После чего были достигнуты
+                        | стабильные проектные показатели.
+        section.section.this--pt0
+            .container
+                img(src="/assets/img/about-banner.jpg" alt="about-banner")
+        include ./pug/footer.pug
+        script(src="/scripts/index.js")

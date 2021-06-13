@@ -1,0 +1,92 @@
+- let navigationLinks = [['/projects.html', 'Проекты', 'projects'],['/about.html', 'О компании', 'about'],['/service.html', 'Услуги', 'services', true],['/contacts.html', 'Контакты', 'contacts']];
+include ./pug/header.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Услуги | Проектая компания №1
+        include ./pug/head
+    body
+        +header(navigationLinks, true)
+        section.section
+            .container
+                h1(data-locale="services").h1.this--left.this--mb30 Услуги
+
+                div.text
+                    p
+                        | Специализированная инжиниринговая компания, оказывающая полный
+                        | комплекс услуг в сфере водоснабжения и водоотведения, а также общего инжиниринга
+        section.section.this--pt0.this--pb250.this--bigtablet-pb50
+            .container
+                div.b_described_imgs
+                    article.b_described_img.animation-opacity
+                        img(src='/assets/img/described-img.jpg' alt="described-img").b_described_img__img
+                        .b_described_img__text
+                            h4.b_described_img__header Обследование объекта
+                            p
+                                | При работе над проектом строительства станции мы следовали требованиям Заказчиков,
+                                | при этом опирались на собственные типовые решения и запатентованные технологии,
+                                | которые обеспечивают энергосбережение
+                    article.b_described_img.animation-opacity
+                        img(src='/assets/img/described-img.jpg' alt="described-img").b_described_img__img
+                        .b_described_img__text
+                            h4.b_described_img__header Проектирование
+                            p
+                                | При работе над проектом строительства станции мы следовали требованиям Заказчиков,
+                                | при этом опирались на собственные типовые решения и запатентованные технологии,
+                                | которые обеспечивают энергосбережение, снижение капитальных и эксплуатационных затрат
+                    article.b_described_img.animation-opacity
+                        img(src='/assets/img/described-img.jpg' alt="described-img").b_described_img__img
+                        .b_described_img__text
+                            h4.b_described_img__header Строительство
+                            p
+                                | При работе над проектом строительства станции мы следовали требованиям
+                                | Заказчиков, при этом опирались на собственные типовые решения и запатентованные
+                                | технологии, которые обеспечивают энергосбережение, снижение капитальных и
+                                | эксплуатационных затрат, возможность повторного использования очищенных сточных
+                                | водцию очистки сточных вод HYY производительностью 1000 м³/сут
+                    article.b_described_img.animation-opacity
+                        img(src='/assets/img/described-img.jpg' alt="described-img").b_described_img__img
+                        .b_described_img__text
+                            h4.b_described_img__header Монтаж
+                            p
+                                | При работе над проектом строительства станции мы следовали требованиям Заказчиков,
+                                | при этом опирались на собственные типовые решения и запатентованные
+                                | технологии, которые обеспечивают энергосбережение
+                    article.b_described_img.animation-opacity
+                        img(src='/assets/img/described-img.jpg' alt="described-img").b_described_img__img
+                        .b_described_img__text
+                            h4.b_described_img__header Пуско-наладка
+                            p
+                                | При работе над проектом строительства станции мы следовали требованиям Заказчиков,
+                                | при этом опирались на собственные типовые решения и запатентованные технологии,
+                                | которые обеспечивают энергосбережение, снижение капитальных и эксплуатационных затрат
+                    article.b_described_img.animation-opacity
+                        img(src='/assets/img/described-img.jpg' alt="described-img").b_described_img__img
+                        .b_described_img__text
+                            h4.b_described_img__header Ввод в эксплуатацию
+                            p
+                                | При работе над проектом строительства станции мы следовали требованиям
+                                | Заказчиков, при этом опирались на собственные типовые решения и
+                                | запатентованные технологии, которые обеспечивают энергосбережение,
+                                | снижение капитальных и эксплуатационных затрат, возможность повторного использования
+                                | очищенных сточных водцию очистки сточных вод HYY производительностью 1000 м³/сут
+        section.section.this--pt0
+            .container
+                .parallel.this--two
+                    h1(data-locale="tell").h1.this--left.this--extrabig  Расскажите нам о Вашем проекте или задайте вопросы
+                    div.mt100.bigtablet-mt30.pdl10.bigtablet-pdl0
+                        form(action="/" method="POST").b_form
+                            .b_form__item
+                                input(placeholder="Почта" type="email" name="email" required).b_form__input
+                            .b_form__item
+                                input(placeholder="Имя" type="text" name="name" required).b_form__input
+                            .b_form__item
+                                input(placeholder="Сообщение" type="text" name="message" required).b_form__input
+                            .b_form__item
+                                button(type="submit" data-locale="send").b_btn.this--block.b_form__submit Отправить
+        include ./pug/footer.pug
+        script(src="/scripts/index.js")
